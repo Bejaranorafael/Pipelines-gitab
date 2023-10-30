@@ -1,4 +1,3 @@
-laro, puedo explicarte en detalle cómo configurar variables de entorno para las URL de la base de datos en un pipeline de GitLab y proporcionarte ejemplos concretos.
 
 Las variables de entorno son valores que se pueden utilizar en tus pipelines para almacenar información sensible o configuraciones específicas para cada entorno (como desarrollo, pruebas, producción). En el caso de las URL de la base de datos, es una práctica común definir diferentes URLs para cada ambiente, ya que las bases de datos de desarrollo, pruebas y producción pueden ser diferentes.
 
