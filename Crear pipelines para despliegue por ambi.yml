@@ -1,0 +1,36 @@
+Crear pipelines para despliegue por ambientes es una práctica común en DevOps. Te mostraré un ejemplo simple de un archivo .gitlab-ci.yml que define un pipeline con tres etapas: desarrollo, pruebas y producción. En este caso, asumiré que estamos desplegando una aplicación web.
+stages:
+  - desarrollo
+  - pruebas
+  - produccion
+
+variables:
+  DEVELOPMENT_DB_URL: "development_database_url"
+  TEST_DB_URL: "test_database_url"
+  PRODUCTION_DB_URL: "production_database_url"
+
+desarrollo:
+  stage: desarrollo
+  script:
+    - echo "Desplegando en ambiente de desarrollo"
+    - # Comandos para desplegar en el ambiente de desarrollo
+
+pruebas:
+  stage: pruebas
+  script:
+    - echo "Desplegando en ambiente de pruebas"
+    - # Comandos para desplegar en el ambiente de pruebas
+
+produccion:
+  stage: produccion
+  script:
+    - echo "Desplegando en ambiente de producción"
+    - # Comandos para desplegar en el ambiente de producción
+En este ejemplo:
+
+Hemos definido tres etapas o stages: desarrollo, pruebas y produccion.
+Hemos configurado variables de entorno para las URL de la base de datos en cada ambiente.
+Cada etapa contiene un script que realiza el despliegue en el ambiente correspondiente. En lugar de los comentarios (# Comandos para desplegar...), debes incluir los comandos y pasos específicos necesarios para desplegar tu aplicación en cada ambiente.
+Este es solo un ejemplo básico. En un entorno de producción real, es probable que necesites configurar tus variables de entorno, configuraciones de servidor, pruebas automatizadas, etc. Además, puedes agregar reglas y restricciones adicionales, como la ejecución de una etapa solo si la anterior fue exitosa.
+
+Este archivo .gitlab-ci.yml se puede personalizar según las necesidades de tu proyecto y las herramientas que estés utilizando en tus pipelines de despliegue por ambientes.
